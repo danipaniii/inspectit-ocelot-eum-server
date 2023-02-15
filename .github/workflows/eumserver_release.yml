@@ -54,7 +54,7 @@ jobs:
             body: ${{ steps.build_changelog.outputs.changelog }}
             files: artifacts/*
             generate_release_notes: true
-            token: ${{ github.token }}
+            token: ${{ secrets.GITHUB_TOKEN }}
             name: Version ${{ github.ref_name }}
 
     build_and_publish_docker_images:
